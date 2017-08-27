@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Пример приложения с PUSH-уведомлениями</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Пример приложения с PUSH-уведомлениями</h1>
+  </header>
+
+  <main>
+    <p>Это пример страницы, на которой можно оформить подписку на PUSH-уведомления</p>
+    <p>
+      <button type="button" id="subscribe">Следить за изменениями</button>
+    </p>
+    <section class="subscription-details js-subscription-details is-invisible">
+      <p>После того как вы нажали на кнопку "Включить ПУШ-уведомления", приложению становятся доступны данные подписки, 
+      для отправки уведомлений требуется передать эти данные на сервер.</p>
+      <p>В реальной жизни это делается с помощью отправки запроса на бэкэнд сайта,
+        но т.к. хостинг github позволяет размещать только статичные файлы, данные подписки необходимо перенести на сервер вручную.
+        Скопируйте появившиеся внизу данные подписки, перейдите по этой <a href="http://shtorin-001-site1.gtempurl.com/subscriptions/create">ссылке</a>, 
+        вставьте скопированный код в поле "JSON подписки", выберите приложение к которому относится подписка (первое в списке), после чего нажите кнопку сохранить.</p>
+      <pre><code class="js-subscription-json"></code></pre>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+  <script type="text/javascript" src="/firebase_subscribe.js"></script>
+
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
+</html>
