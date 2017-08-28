@@ -1,13 +1,3 @@
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDnU949ApofKmeD_P2bv_AE5bpRIdz1pkg",
-    authDomain: "shtoringithubpushes.firebaseapp.com",
-    databaseURL: "https://shtoringithubpushes.firebaseio.com",
-    projectId: "shtoringithubpushes",
-    storageBucket: "shtoringithubpushes.appspot.com",
-    messagingSenderId: "279155818136"
-  };
-
 firebase.initializeApp(config);
 var messaging = firebase.messaging();
 
