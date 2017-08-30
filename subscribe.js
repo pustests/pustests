@@ -109,6 +109,8 @@ function updateSubscriptionOnServer(subscription) {
 }
 
 function sendSubscriptionInfoToServer(subscriptionData) {  
+  console.log(`JSON:`, subscriptionData);
+
   var data = btoa(subscriptionData);  
   var xhr = new XMLHttpRequest();
   var url = pathToSenderService;
