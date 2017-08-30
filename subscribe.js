@@ -2,7 +2,7 @@
 
 'use strict';
 
-const applicationServerPublicKey = 'BCFUU_PhI8tysYRRtUbALDtZS4TM9D99u3HETl6qjjkhtV773LKCw-FD7mqwxt52IGaZoJXFc_m0eeoDC2z-uXY';
+const applicationServerPublicKey = 'BL-InUHqIEZRkTWmkSNWISRpzk5HqNqMNS7STmwzaxV5Q0cLQQ8IclDvmuEDu6oZ34fdnC_lHPmlgmFLsZ6QlhA';
 
 const pathToServiceWorker = '/sw.js';
 const pathToSenderService = 'http://shtorin-001-site1.gtempurl.com/subscribtions/subscribe';
