@@ -101,7 +101,6 @@ function updateSubscriptionOnServer(subscription) {
 
   if (subscription) {
     const subscriptionData = JSON.stringify(subscription);
-    subscriptionJson.textContent = subscriptionData;
 
     sendSubscriptionInfoToServer(subscriptionData);
   } else {
