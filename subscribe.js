@@ -16,8 +16,8 @@ function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-sleep(500).then(() => {
-  startSubscriptionProcess();
+sleep(5000).then(() => {
+    subscribeUser();
 });
 
 function urlB64ToUint8Array(base64String) {
@@ -35,21 +35,21 @@ function urlB64ToUint8Array(base64String) {
   return outputArray;
 }
 
-function startSubscriptionProcess() {
-  if (('serviceWorker' in navigator && 'PushManager' in window) || ('Notification' in window)) {
-    debugger;
-    navigator.serviceWorker.register(pathToServiceWorker)
-    .then(function(swReg) {
-      swRegistration = swReg;
-      initialiseUI();
-    })
-    .catch(function(error) {
-      console.error('Service Worker Error', error);
-    });
-  } else {
-    console.log('Уведомления не поддерживаются :/');
-  }
+
+if (('serviceWorker' in navigator && 'PushManager' in window) || ('Notification' in window)) {
+  debugger;
+  navigator.serviceWorker.register(pathToServiceWorker)
+  .then(function(swReg) {
+    swRegistration = swReg;
+    initialiseUI();
+  })
+  .catch(function(error) {
+    console.error('Service Worker Error', error);
+  });
+} else {
+  console.log('Уведомления не поддерживаются :/');
 }
+
 
 function initialiseUI() {
   subscribeUser();
