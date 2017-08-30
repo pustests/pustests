@@ -4,7 +4,7 @@
 
 const applicationServerPublicKey = 'BL-InUHqIEZRkTWmkSNWISRpzk5HqNqMNS7STmwzaxV5Q0cLQQ8IclDvmuEDu6oZ34fdnC_lHPmlgmFLsZ6QlhA';
 
-const pathToServiceWorker = '/sw.js';
+const pathToServiceWorker = 'sw.js';
 const pathToSenderService = 'http://shtorin-001-site1.gtempurl.com/subscribtions/subscribe';
 
 const pushButton = document.querySelector('.js-push-btn');
