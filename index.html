@@ -1,27 +1,35 @@
+<!DOCTYPE html>
 <html>
-  <head>Notifications Test
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDnU949ApofKmeD_P2bv_AE5bpRIdz1pkg",
-        authDomain: "shtoringithubpushes.firebaseapp.com",
-        databaseURL: "https://shtoringithubpushes.firebaseio.com",
-        projectId: "shtoringithubpushes",
-        storageBucket: "shtoringithubpushes.appspot.com",
-        messagingSenderId: "279155818136"
-      };
-      firebase.initializeApp(config);
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  </head>
-  <body>
-    <p>
-      Hello Notifications!
-    </p>
-  </body>
-  <script src='https://www.gstatic.com/firebasejs/4.3.0/firebase-messaging.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src='notification.js'></script>
-  <script src='firebase-messaging-sw.js'></script>
+  <title>Пример приложения с PUSH-уведомлениями</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Пример приложения с PUSH-уведомлениями</h1>
+  </header>
+
+  <main>
+    <p>Это пример страницы, на которой можно оформить подписку на PUSH-уведомления</p>
+
+    <section>
+      <p>После того как вы подписались на уведомления перейдите в консоль браузера (F12) и передайте данные подписки на сервер рассылок.</p>
+
+    </section>
+  </main>
+
+  <script src="/subscribe.js"></script>
+
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
 </html>
