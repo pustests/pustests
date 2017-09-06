@@ -116,6 +116,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   var url = pathToSenderService;  
   
   xhr.open("POST", url, true);
+  xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function () {
     debugger;
@@ -123,6 +124,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
           console.log(xhr.responseText);
       }
  };
+ 
  xhr.send(subscriptionData);
 }
 
