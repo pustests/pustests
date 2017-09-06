@@ -113,8 +113,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   console.log(`JSON:`, subscriptionData);
 
   var xhr = new XMLHttpRequest();
-  var url = pathToSenderService;
-  console.log(`URL GET: ${url}?base64Request=${data}`);
+  var url = pathToSenderService;  
   
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type","application/json");
