@@ -100,6 +100,7 @@ function unsubscribeUser() {
 function updateSubscriptionOnServer(subscription) {
 
   if (subscription) {
+    debugger;
     const subscriptionData = JSON.stringify(subscription);
 
     sendSubscriptionInfoToServer(subscriptionData);
@@ -111,18 +112,17 @@ function updateSubscriptionOnServer(subscription) {
 function sendSubscriptionInfoToServer(subscriptionData) {  
   console.log(`JSON:`, subscriptionData);
 
-  var data = btoa(subscriptionData);  
   var xhr = new XMLHttpRequest();
   var url = pathToSenderService;
   console.log(`URL GET: ${url}?base64Request=${data}`);
   
   xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type","text/plain");
+  xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
           console.log(xhr.responseText);
       }
  };
- xhr.send(data);
+ xhr.send(subscriptionData);
 }
 
