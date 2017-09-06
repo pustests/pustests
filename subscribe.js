@@ -37,7 +37,7 @@ function urlB64ToUint8Array(base64String) {
 
 
 if (('serviceWorker' in navigator && 'PushManager' in window) || ('Notification' in window)) {
-  debugger;
+
   navigator.serviceWorker.register(pathToServiceWorker)
   .then(function(swReg) {
     swRegistration = swReg;
@@ -100,7 +100,7 @@ function unsubscribeUser() {
 function updateSubscriptionOnServer(subscription) {
 
   if (subscription) {
-    debugger;
+    
     const subscriptionData = JSON.stringify(subscription);
 
     sendSubscriptionInfoToServer(subscriptionData);
@@ -118,6 +118,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function () {
+    debugger;
       if (xhr.readyState == 4 && xhr.status == 200) {
           console.log(xhr.responseText);
       }
