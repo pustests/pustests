@@ -134,7 +134,6 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   xhr.onload = function() {
     debugger;
     var text = xhr.responseText;
-    var title = getTitle(text);
     console.log('Response from CORS request to ' + text);
   };
 
