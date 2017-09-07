@@ -110,7 +110,7 @@ function updateSubscriptionOnServer(subscription) {
 }
 
 function sendSubscriptionInfoToServer(subscriptionData) {  
-  debugger;
+
   console.log(`JSON:`, subscriptionData);
   var url = pathToSenderService;  
 
@@ -122,9 +122,9 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   
   
   xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-Type","application/json");
+  // xhr.setRequestHeader("Content-Type","application/json");
   xhr.onreadystatechange = function () {
-    debugger;
+
       if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
           console.log(xhr.responseText);
       }
@@ -132,13 +132,13 @@ function sendSubscriptionInfoToServer(subscriptionData) {
 
   // Response handlers.
   xhr.onload = function() {
-    debugger;
+
     var text = xhr.responseText;
     console.log('Response from CORS request to ' + text);
   };
 
   xhr.onerror = function() {
-    debugger;
+
     console.log('Woops, there was an error making the request.');
   }; 
  
