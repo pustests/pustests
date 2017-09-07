@@ -142,7 +142,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
     console.log('Woops, there was an error making the request.');
   }; 
  
- xhr.send(JSON.stringify(subscriptionData));
+ xhr.send(subscriptionData);
 }
 
 // Create the XHR object.
