@@ -126,7 +126,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function () {
     debugger;
-      if (xhr.readyState == 4 && xhr.status == 200) {
+      if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
           console.log(xhr.responseText);
       }
  };
@@ -136,7 +136,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
     debugger;
     var text = xhr.responseText;
     var title = getTitle(text);
-    alert('Response from CORS request to ' + url + ': ' + title);
+    alert('Response from CORS request to ' + text);
   };
 
   xhr.onerror = function() {
@@ -162,34 +162,4 @@ function createCORSRequest(method, url) {
     xhr = null;
   }
   return xhr;
-}
-
-// Helper method to parse the title tag from the response.
-function getTitle(text) {
-  return text.match('<title>(.*)?</title>')[1];
-}
-
-// Make the actual CORS request.
-function makeCorsRequest() {
-  // This is a sample server that supports CORS.
-  var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
-
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
-
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    var title = getTitle(text);
-    alert('Response from CORS request to ' + url + ': ' + title);
-  };
-
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
-
-  xhr.send();
 }
