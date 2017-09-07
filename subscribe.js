@@ -122,7 +122,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   
   
   xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Content-Type","application/json");
   xhr.onreadystatechange = function () {
     debugger;
       if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
