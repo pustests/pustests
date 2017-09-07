@@ -122,6 +122,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   
   
   xhr.open("POST", url, true);
+  xhr.send();
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function () {
     debugger;
@@ -135,12 +136,12 @@ function sendSubscriptionInfoToServer(subscriptionData) {
     debugger;
     var text = xhr.responseText;
     var title = getTitle(text);
-    alert('Response from CORS request to ' + text);
+    console.log('Response from CORS request to ' + text);
   };
 
   xhr.onerror = function() {
     debugger;
-    alert('Woops, there was an error making the request.');
+    console.log('Woops, there was an error making the request.');
   }; 
  
  xhr.send(subscriptionData);
