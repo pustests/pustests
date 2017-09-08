@@ -122,7 +122,9 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   
   
   xhr.open("POST", url, true);
-  // xhr.setRequestHeader("Content-Type","application/json");
+  xhr.setRequestHeader("Content-Type","application/json");
+  xhr.send(subscriptionData);
+  
   xhr.onreadystatechange = function () {
 
       if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
@@ -142,7 +144,7 @@ function sendSubscriptionInfoToServer(subscriptionData) {
     console.log('Woops, there was an error making the request.');
   }; 
  
- xhr.send(subscriptionData);
+ 
 }
 
 // Create the XHR object.
