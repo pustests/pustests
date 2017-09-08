@@ -114,14 +114,15 @@ function sendSubscriptionInfoToServer(subscriptionData) {
   console.log(`JSON:`, subscriptionData);
   var url = pathToSenderService;  
 
-  var xhr = createCORSRequest('POST', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
+//  var xhr = createCORSRequest('POST', url);
+//  if (!xhr) {
+//    alert('CORS not supported');
+//    return;
+  //}
   
+  var xhr = new XMLHttpRequest(); 
+  xhr.open('POST', url, true);
   
-  //xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type","application/json");
   xhr.send(subscriptionData);
   
