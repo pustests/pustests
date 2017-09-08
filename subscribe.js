@@ -5,7 +5,7 @@
 const applicationServerPublicKey = 'BL-InUHqIEZRkTWmkSNWISRpzk5HqNqMNS7STmwzaxV5Q0cLQQ8IclDvmuEDu6oZ34fdnC_lHPmlgmFLsZ6QlhA';
 
 const pathToServiceWorker = 'sw.js';
-const pathToSenderService = 'https://pushnotificationsprototype.com/subscribtions/subscribe';
+const pathToSenderService = 'https://pushnotificationsprototype.com/subscriptions/subscribe';
 
 const pushButton = document.querySelector('.js-push-btn');
 
